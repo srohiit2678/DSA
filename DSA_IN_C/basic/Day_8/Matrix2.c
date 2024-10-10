@@ -15,19 +15,26 @@ bool show(int x[4][4],int r, int c){
     for(i=r,j=c;i>=0 && j>=0;i--,j--){
         if(x[i][j]==1)return false;
     }
+     for(i=r,j=c;i>=0 && j<4;i--,j++){
+        if(x[i][j]==1)return 0;
+    }
 return true;
 }
 
 void main(){
-    int x[4][4] = { {1,0,0,0},
+    int x[4][4] = { {0,0,0,0},
                     {0,0,0,0},
                     {0,0,0,0},
                     {0,0,0,0}
                   };
     // cheack for having 1 or not
-    if(show(x,3,3)){
-        x[3][3] = 1;
-    }
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+         if(show(x,j,i)){
+            x[j][i] = 1;
+            }
+        }
+     }
     
     // print x
     for(int i=0;i<4;i++){

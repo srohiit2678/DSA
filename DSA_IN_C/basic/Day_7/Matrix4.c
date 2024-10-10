@@ -11,10 +11,7 @@ bool show(int x[4][4],int r, int c){
     for(i=r;i>=0;i--){
         if(x[i][c]==1)return false;
     }
-    // check diagonals for 1 
-    for(i=r,j=c;i>=0 && j>=0;i--,j--){
-        if(x[i][j]==1)return false;
-    }
+
 return true;
 }
 
