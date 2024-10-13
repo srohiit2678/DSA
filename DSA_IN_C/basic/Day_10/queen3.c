@@ -23,11 +23,11 @@ bool show(int x[4][4],int c){
 	for(int i=0;i<4;i++){
 		if(isValid(x,i,c)){
 			x[i][c]=1;
-			display(x);
+		//	display(x);
 		 if(show(x,c+1))return true;
 
 			x[i][c] = 0;
-			display(x);
+		//	display(x);
 		}
 	}
 	return false;
