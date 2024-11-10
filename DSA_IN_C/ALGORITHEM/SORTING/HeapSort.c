@@ -33,12 +33,18 @@ void deleteRoot(int x[],int n){
         maxHeap(x,i,0);
     }
 }
+void display(int x[],int n)
+{
+	for(int i=0;i<n;i++){
+		printf("%d ",x[i]);
+	}
+ printf("\n");
+}
 main(){
     int x[] = {1,2,3,4,5,6,72,3,4,543,652,46,24};
+             // 56,29,35,42,15,41,75,21
     int n = 13;
     leastRoot(x,n);
     deleteRoot(x,n);
-    for(int i=0;i<n;i++){
-        printf("%d ",x[i]);
-    }
+    display(x,n);
 }
