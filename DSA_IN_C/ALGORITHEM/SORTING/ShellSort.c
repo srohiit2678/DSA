@@ -33,12 +33,10 @@ void iSort(int x[],int n){
         val = x[i];
         for(j=i;j>0 && x[j-1]>val;j--){
                 x[j] = x[j-1]; 
-                display(x,n);
-
+              //  display(x,n);
             }
         x[j] = val;
     }
-
 }
 
 void cSort(int x[],int n){
@@ -54,12 +52,11 @@ while(g>1){
     }
     g = g/2;
 }
-
 }
 
 void shellSort(int x[],int n){
 cSort(x,n);
-display(x,n);
+//display(x,n);
 iSort(x,n);
 }
 
@@ -69,7 +66,6 @@ void main(){
     display(x,n);
     shellSort(x,n);
     display(x,n);
-
 }
 
 
