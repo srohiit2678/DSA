@@ -8,3 +8,10 @@ void main(int i,int j){
         if(printf("\n",i++)){}
     }
 }
+
+
+
+// void main(){
+//     if(NULL == '\0')
+// printf("%d ",1);
+// }
