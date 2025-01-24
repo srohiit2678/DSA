@@ -1,3 +1,38 @@
+#include<stdio.h>
+int perfact(int n,int s,int i){
+	if((i*2-1)>=n)return s;
+	if(n%i==0){
+	s = s + i;		
+	}
+	return perfact(n,s,++i);
+}
+
+void main()
+{	int n = 8; 
+	if(perfact(n,0,1)==n){
+		printf("Perfact ");
+	}
+	else{
+		printf("Not Perfact ");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 
@@ -114,76 +149,76 @@ I			(-				ABCD^*+EF^-GH*+I
     printf("-------------\n");
 
 
-*/
-#include<stdio.h>
-#include<stdlib.h>
+// */
+// #include<stdio.h>
+// #include<stdlib.h>
 
-void insertAtBigin(int);
-void showAllV();
-
-
-struct Node{
-int data;
-struct Node *next;
-};
-
-struct Node *start = NULL;
-
-void * revList(struct Node*);
-
-void main(){
-    showAllV();
-    insertAtBigin(10);
-    insertAtBigin(20);
-    insertAtBigin(30);
-    insertAtBigin(40);
-    insertAtBigin(50);
-
-    showAllV();
-
-    start = (struct Node*)revList(start);
-    showAllV();
-
-}
+// void insertAtBigin(int);
+// void showAllV();
 
 
-void insertAtBigin(int x){
-struct Node *temp = malloc(sizeof(struct Node));
-if (temp == NULL)
-{
-    printf(" No space...\n");
-    return;
-}
-temp -> data = x;
-temp ->next = start;
-start = temp;
-}
+// struct Node{
+// int data;
+// struct Node *next;
+// };
 
-void showAllV(){
-    if(start==NULL)printf("Empty List...\n");
+// struct Node *start = NULL;
 
-    struct Node *temp = start;
-    while(temp!= NULL){
-        printf("%d\n",temp->data);
-        temp = temp->next;
-    } 
-}
+// void * revList(struct Node*);
+
+// void main(){
+//     showAllV();
+//     insertAtBigin(10);
+//     insertAtBigin(20);
+//     insertAtBigin(30);
+//     insertAtBigin(40);
+//     insertAtBigin(50);
+
+//     showAllV();
+
+//     start = (struct Node*)revList(start);
+//     showAllV();
+
+// }
+
+
+// void insertAtBigin(int x){
+// struct Node *temp = malloc(sizeof(struct Node));
+// if (temp == NULL)
+// {
+//     printf(" No space...\n");
+//     return;
+// }
+// temp -> data = x;
+// temp ->next = start;
+// start = temp;
+// }
+
+// void showAllV(){
+//     if(start==NULL)printf("Empty List...\n");
+
+//     struct Node *temp = start;
+//     while(temp!= NULL){
+//         printf("%d\n",temp->data);
+//         temp = temp->next;
+//     } 
+// }
 
 
 
-void *revList(struct Node *temp){
-    if(temp == NULL || temp->next==NULL){
-        return temp;
-    }   
+// void *revList(struct Node *temp){
+//     if(temp == NULL || temp->next==NULL){
+//         return temp;
+//     }   
 
-struct Node* newStart = revList(temp->next);
+// struct Node* newStart = revList(temp->next);
 
-struct Node* temp2 = temp->next;
-temp2->next = temp;
-temp ->next = NULL;
+// struct Node* temp2 = temp->next;
+// temp2->next = temp;
+// temp ->next = NULL;
 
-return newStart;
-}
+// return newStart;
+// }
 /*
 
 #include<stdio.h>
