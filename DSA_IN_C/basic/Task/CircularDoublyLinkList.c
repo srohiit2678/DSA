@@ -202,5 +202,4 @@ do{
 	printf("%d ",temp1->data);
 	temp1 = temp1->prev;
 }while(temp1!=temp2);
-
 }
