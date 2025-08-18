@@ -57,3 +57,45 @@ void main(){
     display(x,n);
     
 }
+
+/*
+
+#include<stdio.h>
+void display(int x[],int n);
+void show(int x[],int n,int div){
+	int i;
+	int a[10]={0};
+    int y[n];	
+	for(i=0;i<n;i++)a[x[i]/div%10]++;
+	for(i=1;i<10;i++)a[i]+=a[i-1];
+	for(i=n-1;i>=0;i--)y[a[x[i]/div%10]-=1]=x[i];
+    for(i=0;i<n;i++)x[i]=y[i];
+		display(x,n);
+}
+void rsort(int x[],int n){
+	int i;
+    int max = x[0];
+    int min = x[0];
+    for(i=1;i<n;i++)if(min>x[i])min=x[i];
+    for(i=0;i<n;i++)x[i]=x[i]-min;
+	for(i=1;i<n;i++)if(max<x[i])max=x[i];
+	for(i=1;i<=max;i=i*10)show(x,n,i);
+	for(i=0;i<n;i++)x[i] = x[i] + min;
+	display(x,n);
+}
+void display(int x[],int n){
+	for(int i=0;i<n;i++){
+		printf("%d ", x[i]);
+}
+printf("\n\n");
+}
+void main(){
+	int n=8;
+	int x[]={66,73,17,13,87,-34,-83,90};
+	display(x,n);
+	rsort(x,n);	
+	display(x,n);
+}
+ 
+
+*/
