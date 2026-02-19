@@ -10,12 +10,11 @@ void sSort(int x[],int n)
             if(x[max]<x[j])
             max = j;
         }
-        if(i!=max)
-			{
-			int t = x[max];
-			x[max]  = x[i];
-			x[i] = t;
-			}
+        if(i!=max){
+			      int t = x[max];
+			      x[max]  = x[i];
+			      x[i] = t;
+		     	}
     }
 }
 void display(int x[],int n)
